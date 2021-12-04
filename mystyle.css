@@ -16,6 +16,10 @@ p {
     font-family: verdana, sans-serif; /* first priority, backup front (called a font stack) */
 }
 
+body{
+    background-color: darkgray;
+}
+
 span {
     font-weight: bold;
     font-style: italic
@@ -26,8 +30,26 @@ span {
 }
 
 #meow {
-    filter: grayscale(100%);
-    border: dashed blue
+    width: 50%;
+    border: dashed blue 10px;
+    filter: sepia(50%);
+    position: relative;
+    top: 5px;
+    left: 20px
+}
+
+#meow:hover{
+    width: 50%;
+    border: dashed blue 20px;
+    filter: sepia(0%);
+    transition: border 1s ease, filter 2s linear;
+}
+
+#me_ow{
+    /*position: absolute;*/
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .darkback{
@@ -44,6 +66,28 @@ li:hover {
 }
 
 img {
-    float: left;
-    margin-right: 20px
+    width: 50%    
+    /*float: left;
+    margin-right: 20px*/
+}
+
+#translated{
+    transform: translate(50px, -100px); /*left right*/
+}
+
+#rotated{
+    transform: rotate(45deg)
+}
+
+#scaled{
+    transform: scale(1.8, 0.6);
+}
+
+#combined{
+    transform: scale(0px, 0px) rotate(0deg) translate (0px, 0px);
+    transition: transform 1s ease
+}
+
+#combined:hover{
+    transform: scale(1.8, 0.6) rotate(45deg) translate (-100px, -100px);
 }
