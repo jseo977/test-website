@@ -22,11 +22,11 @@ body{
 
 span {
     font-weight: bold;
-    font-style: italic
+    font-style: italic;
 }
 
 #poop {
-    color: brown
+    color: brown;
 }
 
 #meow {
@@ -35,7 +35,7 @@ span {
     filter: sepia(50%);
     position: relative;
     top: 5px;
-    left: 20px
+    left: 20px;
 }
 
 #meow:hover{
@@ -53,20 +53,20 @@ span {
 }
 
 .darkback{
-    background-color: slategray
+    background-color: slategray;
 }
 
 a:visited {
-    color: darkmagenta
+    color: darkmagenta;
 }
 
 li:hover {
     background-color: lightcoral;
-    margin-left: 30px
+    margin-left: 30px;
 }
 
 img {
-    width: 50%    
+    width: 50%;
     /*float: left;
     margin-right: 20px*/
 }
@@ -76,18 +76,44 @@ img {
 }
 
 #rotated{
-    transform: rotate(45deg)
+    transform: rotate(45deg);
 }
 
 #scaled{
     transform: scale(1.8, 0.6);
 }
 
+/* Why isn't this working?*/
 #combined{
     transform: scale(0px, 0px) rotate(0deg) translate (0px, 0px);
-    transition: transform 1s ease
+    transition: transform 1s ease;
 }
 
 #combined:hover{
     transform: scale(1.8, 0.6) rotate(45deg) translate (-100px, -100px);
+}
+
+#animated{
+    transform: scale(50%);
+}
+
+#animation_div:hover #animated{
+    animation-name: bouncyfeline;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+}
+
+@keyframes bouncyfeline{
+    0%/*from*/{
+
+    }
+    50%{
+        background-colour: blue;
+    }
+    100%/*to*/{
+        margin-left: 100%;
+        background-color: white;
+    }
 }
